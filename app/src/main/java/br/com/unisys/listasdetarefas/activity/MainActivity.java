@@ -26,6 +26,7 @@ import br.com.unisys.listasdetarefas.R;
 import br.com.unisys.listasdetarefas.adapter.TarefaAdapter;
 import br.com.unisys.listasdetarefas.helper.DbHelper;
 import br.com.unisys.listasdetarefas.helper.RecyclerItemClickListener;
+import br.com.unisys.listasdetarefas.helper.TarefaDAO;
 import br.com.unisys.listasdetarefas.model.Tarefa;
 
 public class MainActivity extends AppCompatActivity {
@@ -84,14 +85,9 @@ public class MainActivity extends AppCompatActivity {
     public void carregarListaTarefas(){
 
         //Listar tarefas
-        Tarefa tarefa1 = new Tarefa();
-        tarefa1.setNomeTarefa("Ir ao mercado");
-        listaTarefas.add(tarefa1);
+       TarefaDAO tarefaDAO = new TarefaDAO(getApplicationContext());
+       listaTarefas = tarefaDAO.listar();
 
-        //Listar tarefas
-        Tarefa tarefa2 = new Tarefa();
-        tarefa2.setNomeTarefa("Ir ao cinema");
-        listaTarefas.add(tarefa2);
 
 
         //Exibir lista de tarefas no RecyclerView
