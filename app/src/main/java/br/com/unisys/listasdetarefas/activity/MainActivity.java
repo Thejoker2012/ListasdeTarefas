@@ -1,5 +1,6 @@
 package br.com.unisys.listasdetarefas.activity;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -23,6 +24,7 @@ import java.util.List;
 
 import br.com.unisys.listasdetarefas.R;
 import br.com.unisys.listasdetarefas.adapter.TarefaAdapter;
+import br.com.unisys.listasdetarefas.helper.DbHelper;
 import br.com.unisys.listasdetarefas.helper.RecyclerItemClickListener;
 import br.com.unisys.listasdetarefas.model.Tarefa;
 
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Configurando recycleView
         recyclerView = findViewById(R.id.recyclerView);
+
 
         //Adicionar Evento de Click
         recyclerView.addOnItemTouchListener(
