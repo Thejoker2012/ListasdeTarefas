@@ -1,8 +1,10 @@
-package br.com.unisys.listasdetarefas;
+package br.com.unisys.listasdetarefas.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import br.com.unisys.listasdetarefas.R;
 
 public class AdicionarTarefaActivity extends AppCompatActivity {
 
